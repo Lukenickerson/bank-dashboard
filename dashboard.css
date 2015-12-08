@@ -1,0 +1,458 @@
+body {
+	font-family: Verdana, sans-serif;
+	color: #333;
+	text-align: center;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+}
+
+/* ==== Base Elements ==== */
+
+a {
+	color: #4466bb;
+	text-decoration: none;
+}
+a:hover {
+	color: #5577aa;
+	text-decoration: underline;
+}
+
+form {
+}
+
+input, select, textarea {
+	font-size: inherit;
+	padding: 0.2em;
+	margin: 0.5em 0;
+}
+
+button, 
+input[type="submit"] {
+	display: inline-block;
+	padding: 0.75em 1em;
+	background-color: #666;
+	background-color: rgba(0,0,0,0.2);
+	font-weight: bold;
+	color: white;
+	border-radius: 0.5em;
+	border: none;
+	border-bottom: solid 1px rgba(0,0,0,0.25);
+	font-size: 90%;
+	text-transform: uppercase;
+	text-align: center;
+	cursor: pointer;
+	box-shadow: 0 0.2em 0.3em rgba(0,0,0,.1);
+	text-shadow: 0 0.1em 0.2em rgba(0,0,0,0.2);
+}
+
+label {
+	display: block;
+	font-size: 80%;
+	font-weight: bold;
+}
+
+form,
+body > nav > ul,
+.balance {
+	overflow: auto;
+}
+
+.balance
+ {
+	content: "";
+	display: table;
+}
+.clearfix,
+.goal {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* ==== Body ==== */
+
+body > * {
+	text-align: left;
+}
+
+body > div,
+body > header > div,
+body > nav > ul,
+body > footer {
+	display: block;
+	width: 70%;
+	min-width: 800px;
+	max-width: 1000px;
+	padding: 0;
+	margin: 0 auto;
+	list-style: none;
+}
+
+body > header,
+body > nav {
+	width: 100%;
+	background-color: #ddd;
+}
+body > footer {
+	padding: 10% 1em;
+	margin-top: 20%;
+	height: 10%;
+	background-color: #eee;
+	color: #ccc;
+	border: dashed 2px #ccc;
+}
+
+body > nav {
+	margin-bottom: 2em;
+}
+
+	body > nav > ul {
+		display: block;
+		clear: both;
+	}
+
+	body > nav > ul > li {
+		display: block;
+		float: left;
+		margin: 0 0.5% 0 0;
+		width: 19%;
+		color: #333;
+		background-color: #e4e4e4;
+		text-align: center;
+		border-radius: 0.4em 0.4em 0 0;
+	}
+		body > nav > ul > li.selection {
+			background-color: #fff;
+		}
+		body > nav > ul > li > a {	
+			display: block;
+			box-sizing: border-box;
+			color: inherit;
+			width: 100%;
+			text-decoration: none;
+			padding: 1em 1em;		
+		}
+		body > nav > ul > li > a:hover {
+			background-color: rgba(255,255,255,0.2);
+			color: #000;
+			text-decoration: none;
+		}
+
+
+header.top h1 {
+	font-size: 200%;
+	padding: 0.5em 0;
+	color: white;
+}
+
+
+.topSidebar {
+	text-align: right;
+	margin: -5.5em 0 0 0;
+	padding: 1em;
+}
+	.topSidebar input[type="search"] {
+		margin-top: 1em;
+	}
+
+	
+h1 {
+	font-size: 140%;
+	color: #999;
+}
+	h1 > span {
+		display: block;
+		font-size: 70%;
+	}
+	
+/* ===== Balance ===== */
+	
+.balance {
+
+}
+
+	.balance header {
+		overflow: auto;
+	}
+
+	.balance .total,
+	.leftover .total {
+		padding-top: 1em;
+		text-align: right;
+		font-size: 200%;
+	}
+
+.timeframe {
+	background-color: #fff;
+	padding: 1em 0;
+	margin: 1em 0 0 0;
+	border-top: solid 1px #e1e1e1;
+}
+	.timeframe select {
+		font-size: inherit;
+	}
+
+	
+.half {
+	width: 47.5%;
+	float: left;
+}
+	.half1, .half.half1 {
+		margin-right: 2.5%;
+	}
+	.half2, .half.half2 {
+		margin-left: 2.5%;
+	}
+
+.activityList {
+	display: block;
+	padding: 0;
+	margin: 0 0 0.5em 0;
+}
+	.activityList > li,
+	.startingBalance {
+		display: block;
+		position: relative;
+		padding: 1em 1em;
+		margin: 0 0 0.2em 0;
+		background-color: #eee;
+		border-bottom: solid 1px #e1e1e1;		
+	}
+
+
+		.activityList > li.attention {
+			background-color: #eebbbb;
+		}
+		
+		.activityList > li > div,
+		.startingBalance > div {
+			display: inline-block;
+			margin: 0 1em 0 0;
+		}
+		
+	.openable {
+		cursor: pointer;
+	}
+	.openable:hover > div.desc,
+	.openable:hover > div > .desc {
+		color: #4466bb;
+	}		
+		.openable > div.desc:before,
+		.openable > div > .desc:before		{
+			content: "\25B6";
+			display: inline-block;
+			margin-right: 1em;
+			transform: rotate(0deg);
+		}
+		.openable.open > div.desc:before,
+		.openable.open > div > .desc:before		{
+			transform: rotate(90deg);
+		}
+	.details {
+		display: none;
+		margin: 1em 0;
+		padding: 1em 10%;
+		border-top: solid 1px rgba(0,0,0,0.2);
+	}
+	.note {
+		font-size: 80%;
+	}
+
+	/*
+	.activityList > li.attention:after {
+		content: "!";
+		display: block;
+		position: absolute;
+		left: -1.6em; top: 0.3em;
+		width: 1em; height: 1em;
+		background-color: inherit;
+		border-radius: 1em;
+		border: solid 1px rgba(0,0,0,0.2);
+		padding: 0.5em;
+		font-size: 120%;
+		font-weight: bold;
+		text-align: center;
+		cursor: pointer;
+		box-shadow: 0 0.2em 0.3em rgba(0,0,0,.1);
+	}
+	*/
+	/*
+	.activityList > li.custom:after {
+		content: "\22ee";
+		display: block;
+		position: absolute;
+		right: -1em; top: 0.25em;
+		width: 1em; height: 1em;
+		background-color: inherit;
+		border-radius: 1em;
+		border: solid 1px rgba(0,0,0,0.2);
+		padding: 0.5em;
+		font-size: 120%;
+		font-weight: bold;
+		text-align: center;
+		cursor: pointer;
+		box-shadow: 0 0.2em 0.3em rgba(0,0,0,.1);
+	}
+	*/
+
+	.activityList a.info {
+		font-style: italic;
+	}
+	
+	.activityList .hidden {
+		display: none;
+	}
+		
+		
+.amount {
+	float: right;
+	text-align: right;	
+}
+
+.detailList {
+	display: none;
+	margin: 0;
+	padding: 1em 0 1em 2em;
+}
+.open .detailList {
+	display: block;
+}
+	.detailList > li {
+		display: block;
+		padding: 0.2em;
+		border-bottom: solid 1px rgba(0,0,0,0.1);
+	}
+		.detailList > li > div {
+			display: inline-block;
+			margin: 0 1em 0 0;
+		}
+	
+.actions {
+	display: block;
+	box-sizing: border-box;
+	padding: 0.1em 1em 0.1em 0;
+	text-align: right;
+	clear: both;
+	width: 100%;
+}
+	.actions button {
+		background-color: rgba(0,0,0,0.12);
+	}
+	.actions a {
+		display: inline-block;
+		padding: 1em;
+	}
+
+button.x {
+	color: #666;
+	text-shadow: none;
+	box-shadow: none;
+	font-size: 110%;
+	background-color: transparent;
+	border: solid 1px rgba(0,0,0,0.1);
+}
+	
+button.add {
+	display: block;
+	float: right;
+	border: 0;
+	background-color: #bbb;
+	font-size: 300%;
+	border-radius: 1em;
+	padding: 0em;
+	width: 1.2em;
+	height: 1.2em;
+}
+
+form.add {
+	display: none;
+	background-color: #eee;
+	border-bottom: solid 1px #e1e1e1;
+	padding: 1em;
+}
+	form.add input,
+	form.add select	{
+		font-size: inherit;
+	}
+	form.add input[type="submit"], 
+	form.add button {
+		float: right;
+	}
+
+div.remindMe {
+	display: none;
+}
+
+.singleSubmit {
+	clear: both;
+}
+	
+.goals {
+	clear: both;
+}
+
+.goalList {
+	display: block;
+	list-style: none;
+	padding: 0;
+	margin: 1em 0;
+}
+	.goalList > li {
+		display: block;
+		padding: 1em;
+		margin: 0 0 0.2em 0;
+		background-color: #eee;
+		border-bottom: solid 1px #e1e1e1;		
+	}
+	
+		.goal {
+			width: 100%;
+		}
+			.goal > * {
+				display: block;
+				float: left;
+				margin: 0 1% 0 0;
+			}
+			.goal .desc {
+				width: 20%;
+			}
+			.goal progress {
+				height: 1em;
+			}
+			.goal .progress {
+				width: 14em;
+				height: 1.5em;
+				background: white;
+				border: solid 1px rgba(0,0,0,0.2);
+			}
+				.progress > div {
+					height: 100%;
+					background-color: #adc;
+				}
+			.goal .percent {
+				font-size: 120%;
+				font-weight: bold;
+				color: rgba(0,0,0,0.65);
+				width: 3em;
+				text-align: center;
+			}
+			.goal .deadline {
+				font-size: 80%;
+				float: right;
+			}
+
+.leftover {
+	border-top: solid 1px #e1e1e1;
+	margin-top: 8em;
+	clear: both;
+}
+
+button.primary {
+	min-width: 10em;
+}
+	
+	
+	
+	

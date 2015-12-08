@@ -1,0 +1,404 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Banking Dashboard</title>
+	<link href="dashboard.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<header class="top">
+	<div>
+		<h1>Acme Bank</h1>
+		<div class="topSidebar">
+			[Your Account] | Sign Out
+			<br /> 
+			<input type="search" />
+			<input type="submit" value="search" />
+		</div>
+	</div>
+</header>
+<nav>
+	<ul>
+		<li class="selection"><a href="#!/">Balances &amp;<br /> Activity</a></li>
+		<li><a href="#!/">Transfers &amp;<br /> Bill Pay</a></li>
+		<li><a href="#!/">Accounts<br />&nbsp;</a></li>
+		<li><a href="#!/">Offers &amp;<br /> Deals</a></li>
+		<li><a href="#!/">Help &amp;<br /> Support</a></li>
+	</ul>
+</nav>
+
+<div>
+<div id="past" class="balance half half1">
+	<header>
+		<div class="half half1">
+			<h1>Current <span>Checking Balance</span></h1>
+			<div class="date">today, 11/7</div>
+		</div>
+		<div class="total half half2">$365.00</div>
+	</header>
+	<div class="timeframe">
+		Activity for Last
+		<select>
+			<option>1 week</option>
+			<option>2 weeks</option>
+			<option selected="selected">1 month</option>
+			<option>3 months</option>
+			<option>6 months</option>
+			<option>1 year</option>
+			<option>custom...</option>
+		</select>
+	</div>
+	<div class="startingBalance">
+		<div class="desc">Previous Balance (on 10/7)</div>
+		<div class="amount">300</div>
+	</div>	
+	<ul class="activityList">
+		<li>
+			<div class="desc">Income</div>
+			<div class="amount">+2,100</div>
+			<ol class="detailList">
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Paycheck</div>
+					<div class="amount">+1,000</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Paycheck</div>
+					<div class="amount">+1,000</div>
+				</li>				
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Deposit</div>
+					<div class="amount">+50</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Deposit</div>
+					<div class="amount">+25</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Deposit</div>
+					<div class="amount">+25</div>
+				</li>				
+			</ol>			
+		</li>
+		<li>
+			<div class="desc">Goals (10%)</div>
+			<!--- <div><a class="info" href="#goals">see below</a></div> --->
+			<div class="amount">-210</div>
+			<ol class="detailList">
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Car Repairs (1%)</div>
+					<div class="amount">-21</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Birthday Gifts (1%)</div>
+					<div class="amount">-21</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Christmas Gifts (2%)</div>
+					<div class="amount">-42</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Vacation (2%)</div>
+					<div class="amount">-42</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">House Downpayment (4%)</div>
+					<div class="amount">-84</div>
+				</li>				
+			</ol>
+		</li>		
+		<li>
+			<div class="desc">Usual Expenses</div>
+			<div class="amount">-1,800</div>
+			<ol class="detailList">
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Movie Purchase</div>
+					<div class="amount">-20</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Credit Card Payment</div>
+					<div class="amount">-200</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Rent Bill Pay</div>
+					<div class="amount">-800</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Dinner</div>
+					<div class="amount">-80</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">[description]</div>
+					<div class="amount">-300</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">[description]</div>
+					<div class="amount">-400</div>
+				</li>
+			</ol>
+		</li>
+		<li class="attention">
+			<div class="desc">Unusual Expenses</div>
+			<div class="amount">-25</div>
+			<ol class="detailList">
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Purchase on strange website</div>
+					<div class="amount">-23</div>
+					<div class="actions">
+						<button type="button" class="primary">Approve</button>
+						<a href="#!">Dispute</a>
+					</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Abnormal Fee</div>
+					<div class="amount">-2</div>
+					<div class="actions">
+						<button type="button" class="primary">Approve</button>
+						<a href="#!">Dispute</a>
+					</div>
+				</li>				
+			</ol>
+		</li>
+	</ul>
+</div>
+
+
+<div class="balance half half2 future">
+	<header>
+		<div class="half half1">
+			<h1>Estimated <span>Checking Balance</span></h1>
+			<div class="date">in a month, 12/7</div>
+		</div>
+		<div class="total half half2">$161.00</div>
+	</header>
+	<div class="timeframe">
+		Budget for Next
+		<select>
+			<option>1 week</option>
+			<option>2 weeks</option>
+			<option selected="selected">1 month</option>
+			<option>3 months</option>
+			<option>6 months</option>
+			<option>1 year</option>
+			<option>custom...</option>
+		</select>
+	</div>
+	<div class="startingBalance">
+		<div class="desc">Starting Balance (on 11/7)</div>
+		<div class="amount">365</div>
+	</div>
+	<ul class="activityList">
+		<li>
+			<div class="desc">Estimated Income</div>
+			<div class="amount">+2,000</div>
+			<ol class="detailList">
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Paycheck</div>
+					<div class="amount">+1,000</div>
+				</li>
+				<li>
+					<div class="date">mm/dd</div>
+					<div class="desc">Paycheck</div>
+					<div class="amount">+1,000</div>
+				</li>				
+			</ol>			
+		</li>
+		<li>
+			<div class="desc">Goals (9%)</div>
+			<div><a class="info" href="#goals">adjust below</a></div>
+			<div class="amount">-200</div>
+		</li>
+		<li>
+			<div class="desc">Estimated Expenses</div>
+			<div class="amount">-1,754</div>
+		</li>
+
+		<li class="custom attention">
+			<div class="desc">
+				<span class="type">Bill:</span>
+				Car Insurance
+			</div>
+			<div class="date">12/9</div>
+			<div class="note">due soon</div>
+			<div class="amount">-400</div>
+			<ol class="actions">
+				<button type="button" class="primary">Paid</button>
+				<button type="button">Edit</button>
+				<button type="button">Remove</button>
+			</ol>			
+		</li>
+		<li class="custom">
+			
+			<div class="desc">
+				<span class="type">Bill:</span>
+				Doctor visit</div>
+			<div class="date">12/24</div>
+			<div class="amount">-50</div>
+			<ol class="actions">
+				<button type="button" class="primary">Paid</button>
+				<button type="button">Edit</button>
+				<button type="button">Remove</button>
+			</ol>
+		</li>		
+	</ul>
+	<button type="button" class="add openAddForm">+</button>
+	<form class="add">
+		<button type="button" class="x closeAddForm">X</button>
+		<input type="text" name="description" placeholder="description" />
+		<br />
+		<select name="type">
+			<option>Withdrawal</option>
+			<option>Deposit</option>
+			<option>Bill</option>
+			<option>Outstanding Check</option>
+		</select>
+		<input type="number" name="amount" placeholder="amount" />
+		<label>On or before</label>		
+		<input type="date" name="date" />
+		<br />
+		<button type="button" class="remindMe">Remind Me</button>
+		<div class="remindMe">
+			<div>Remind Me</div>
+			<input type="checkbox" />Email xxx...@gmail.com
+			<br /><input type="checkbox" />Text Message (xxx)-xxx-1234
+		</div>
+		<input type="submit" value="Save" class="singleSubmit" />
+	</form>
+</div>
+
+</div>
+
+<div id="goals" class="goals">
+	<h1>Goals</h1>
+	<ol class="goalList">
+		<li class="openable">
+			<div class="goal">
+				<div class="desc">Car Repairs</div>
+				<div class="percent">86%</div>
+				<div class="progress"><div style="width:85.7%"></div></div>
+				<div class="amounts">$300 of 350</div>
+				<div class="deadline">Complete in xxx days, on mm/dd/yyyy</div>
+			</div>
+			<div class="details">
+				<form>
+				<label>Name</label>
+				<input type="text" />
+				<label>Goal Amount</label>
+				$<input type="number" />
+				<label>Deadline (optional)</label>
+				<input type="date" />
+				<label>Percentage of Income into Checking</label>
+				<input type="number" />%
+				<input type="submit" value="Save" class="singleSubmit" />
+				</form>
+			</div>
+		</li>
+		<li class="openable">
+			<div class="goal">
+				<div class="desc">Christmas Gifts</div>
+				<div class="percent">100%</div>
+				<div class="progress"><div style="width:100%"></div></div>
+				<div class="amounts">$800 of 800</div>
+				<div class="deadline">Complete! 
+					<button type="button">Transfer to checking</button>
+				</div>
+			</div>
+		</li>
+		<li class="openable">
+			<div class="goal">
+				<div class="desc">Birthday Gifts</div>
+				<div class="percent">50%</div>
+				<div class="progress"><div style="width:50%"></div></div>
+				<div class="amounts">$200 of 400</div>
+				<div class="deadline">Complete in xxx days, on mm/dd/yyyy</div>
+			</div>
+		</li>
+		<li class="openable">
+			<div class="goal">
+				<div class="desc">Vacation</div>
+				<div class="percent">16%</div>
+				<div class="progress"><div style="width:16%"></div></div>
+				<div class="amounts">$320 of $2,000</div>
+				<div class="deadline">Complete in xxx days, on mm/dd/yyyy</div>
+			</div>
+		</li>
+		<li class="openable">
+			<div class="goal">
+				<div class="desc">House Downpayment</div>
+				<div class="percent">3%</div>
+				<div class="progress"><div style="width:2.6%"></div></div>
+				<div class="amounts">$1,059 of 40,000</div>
+				<div class="deadline">Complete in xxx days, on mm/dd/yyyy</div>
+			</div>
+		</li>
+		<li class="openable">
+			<div class="goal">
+				<div class="desc">Pay off Credit Card</div>
+				<div class="percent">40%</div>
+				<div class="progress"><div style="width:40%"></div></div>
+				<div class="amounts">$400 of 1,000</div>
+				<div class="deadline">Complete in xxx days, on mm/dd/yyyy</div>
+			</div>
+		</li>
+		<li class="openable">
+			<div class="goal">
+				<div class="desc">Car Loan</div>
+				<div class="percent">68%</div>
+				<div class="progress"><div style="width:68.3%"></div></div>
+				<div class="amounts">$6,145 of 9,000</div>
+				<div class="deadline">Complete in xxx days, on mm/dd/yyyy</div>
+			</div>
+		</li>
+		<li class="openable">
+			<div class="goal">
+				<div class="desc">Student Loan</div>
+				<div class="percent">75%</div>
+				<div class="progress"><div style="width:75.5%"></div></div>
+				<div class="amounts">$18,111 of 24,000</div>
+				<div class="deadline">Complete in xxx days, on mm/dd/yyyy</div>
+			</div>
+		</li>
+	</ol>
+	<button type="button" class="add">+</button>
+</div>
+
+<div class="leftover">
+	<header>
+		<div class="half half1">
+			<h1>Unassigned <span>Savings Balance</span></h1>
+			<div class="date">today, mm/dd</div>
+		</div>
+		<div class="total half half2">$1,090.00</div>
+	</header>
+</div>
+
+<footer>
+[footer info: disclaimers, copyright]
+</footer>
+
+<div id="scripts">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="banking-dashboard.js"></script>
+</div>
+
+</body>
+</html>
